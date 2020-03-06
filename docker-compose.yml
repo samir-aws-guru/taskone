@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  
+  front:
+    image: samir27110/frontend
+    ports:
+      - "80:80"
+
+  back:
+    image: samir27110/backend 
+    ports:
+      - "5000:80"
+    depends_on: 
+      - front
+
+  dbpostgres:
+    image: postgres:9.6
+    ports:
+      - "5432:80"
+    depends_on: 
+      - back

@@ -1,2 +1,4 @@
 # taskone
-first task
+## Build and deploy simple app
+TeamCity and Octopus 
+
