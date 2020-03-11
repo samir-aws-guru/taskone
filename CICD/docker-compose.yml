@@ -3,12 +3,12 @@ version: "3"
 services:
   
   front:
-    image: samir27110/frontend
+    image: hub.docker.com/u/samir27110/samir27110:frontend
     ports:
       - "80:80"
 
   back:
-    image: samir27110/backend 
+    image: hub.docker.com/u/samir27110/samir27110:backend 
     ports:
       - "5000:80"
     depends_on: 
