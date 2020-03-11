@@ -1,22 +1,13 @@
-version: "3"
-
+version: "2"
 services:
-  
-  front:
-    image: hub.docker.com/u/samir27110/samir27110:frontend
-    ports:
-      - "80:80"
+    web:
+        image: docker.io/samir27110/samke-frontend
+        ports:
+            - 80:80
+    api:
+        image: docker.io/samir27110/samke-backend
+        depends_on:
+            - web
+        ports:
+            - 5000:80
 
-  back:
-    image: hub.docker.com/u/samir27110/samir27110:backend 
-    ports:
-      - "5000:80"
-    depends_on: 
-      - front
-
-  dbpostgres:
-    image: postgres:9.6
-    ports:
-      - "5432:80"
-    depends_on: 
-      - back
